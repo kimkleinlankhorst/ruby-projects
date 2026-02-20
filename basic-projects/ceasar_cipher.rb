@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def ceasar_cipher(input, shift_factor)
   input.chars.map do |char|
     if char.match?(/[a-zA-Z]/)
