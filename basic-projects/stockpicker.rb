@@ -6,7 +6,6 @@ def stock_picker(prices)
   best_days   = []
 
   prices.each_with_index do |price, day|
-
     profit = price - min_price
 
     # store these indexes if more profit is made on this sell_day
@@ -24,4 +23,4 @@ def stock_picker(prices)
   best_days
 end
 
-p stock_picker([17,3,6,9,15,8,6,1,10])
+p stock_picker([17, 3, 6, 9, 15, 8, 6, 1, 10])
