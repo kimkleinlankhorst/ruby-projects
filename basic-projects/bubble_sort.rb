@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def bubble_sort(arr)
   (arr.length - 1).downto(0) do |end_i|
     # Loop through the array comparing adjacent indices, every round stop checking at one lower index

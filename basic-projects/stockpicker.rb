@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def stock_picker(prices)
   min_price = prices[0]
   min_day   = 0
