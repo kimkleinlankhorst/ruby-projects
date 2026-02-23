@@ -1,5 +1,6 @@
 require_relative 'player'
 require_relative 'human_player'
+require_relative 'computer_player'
 
 # Game has a board and two players
 class Game
@@ -10,7 +11,7 @@ class Game
     @board = Array.new(10)
     @current_player_id = 0
     @players = [player_1_class.new(self, 'X'), player_2_class.new(self, 'O')]
-    puts "#{current_player} goes first."
+    puts "#{current_player} #{current_player.marker} goes first."
   end
   attr_reader :board, :current_player_id
 
@@ -19,7 +20,7 @@ class Game
   end
 
   def place_player_marker(player)
-    position = player.select_position!
+    position = player.select_position
     puts "#{player} #{player.marker} selects position #{position}"
     @board[position] = player.marker
   end
@@ -90,4 +91,4 @@ class Game
   end
 end
 
-Game.new(HumanPlayer, HumanPlayer).play
+Game.new(HumanPlayer, ComputerPlayer).play
